@@ -1,17 +1,19 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using EchurchBlazor.Server.Models;
 
 namespace echurch.Models
 {
     public class Arange
     {
-        public int id { get; set; }
-        public int user_id { get; set; }
-        public int event_id { get; set; }
+        [Key]
+        public int ID { get; set; }
+        public ApplicationUser User { get; set; }
+        public Event Event { get; set; }
         [Required]
-        public DateTime created { get; set; }
-        public DateTime modified { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
         [Required]
-        public string status { get; set; }
+        public string Status { get; set; }
     }
 }

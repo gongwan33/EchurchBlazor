@@ -4,6 +4,8 @@ namespace echurch.Models
 {
     public class SecretToken
     {
-        public string token { get; set; }
+        [Key]
+        public string Name { get; set; }
+        public string Token { get; set; }
     }
 }

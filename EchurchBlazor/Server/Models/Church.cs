@@ -5,16 +5,17 @@ namespace echurch.Models
 {
     public class Church
     {
-        public int id { get; set; }
+        [Key]
+        public int ID { get; set; }
         [Required]
-        public string name { get; set; }
-        public double? lng { get; set; }
-        public double? lat { get; set; }
-        public string style { get; set; }
-        public string desc { get; set; }
-        public DateTime created { get; set; }
-        public DateTime modified { get; set; }
-        public string main_image { get; set; }
-        public string other_param { get; set; }
+        public string Name { get; set; }
+        public double? Lng { get; set; }
+        public double? Lat { get; set; }
+        public string Style { get; set; }
+        public string Desc { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
+        public string MainImage { get; set; }
+        public string OtherParam { get; set; }
     }
 }

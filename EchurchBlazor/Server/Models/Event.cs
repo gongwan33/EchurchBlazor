@@ -5,18 +5,19 @@ namespace echurch.Models
 {
     public class Event
     {
-        public int id { get; set; }
+        [Key]
+        public int ID { get; set; }
         [Required]
-        public string name { get; set; }
-        public DateTime starttime { get; set; }
-        public DateTime endtime { get; set; }
-        public string desc { get; set; }
-        public string other_param { get; set; }
-        public string type { get; set; }
-        public DateTime created { get; set; }
-        public DateTime modified { get; set; }
-        public string status { get; set; }
-        public int? church_id { get; set; }
-        public string repeat { get; set; }
+        public string Name { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Desc { get; set; }
+        public string OtherParam { get; set; }
+        public string Type { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
+        public string Status { get; set; }
+        public Church Church { get; set; }
+        public string Repeat { get; set; }
     }
 }

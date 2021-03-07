@@ -1,9 +1,13 @@
-﻿namespace echurch.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace echurch.Models
 {
     public class Result
     {
-        public int code { get; set; }
-        public string msg { get; set; }
-        public object other { get; set; }
+        [Key]
+        public int Code { get; set; }
+        public int ResourceID { get; set; }
+        public string Msg { get; set; }
+        public string Other { get; set; }
     }
 }

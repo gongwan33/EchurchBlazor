@@ -1,16 +1,20 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using EchurchBlazor.Server.Models;
+
 namespace echurch.Models
 {
     public class Review
     {
-        public int id { get; set; }
-        public int? user_id { get; set; }
-        public double? rate { get; set; }
-        public string content { get; set; }
-        public int? church_id { get; set; }
-        public DateTime created { get; set; }
-        public DateTime modified { get; set; }
-        public int? event_id { get; set; }
-        public string type { get; set; }
+        [Key]
+        public int ID { get; set; }
+        public ApplicationUser User { get; set; }
+        public double? Rate { get; set; }
+        public string Content { get; set; }
+        public Church Church { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
+        public Event Event { get; set; }
+        public string Type { get; set; }
     }
 }
